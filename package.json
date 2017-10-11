@@ -4,12 +4,16 @@
   "description": "react-resume",
   "main": "index.js",
   "repository": "git@github.com:zhuchaoyang/react-resume.git",
+  "scripts": {
+    "start": "webpack-dev-server --progress --colors",
+    "build": "webpack -p --progress --colors"
+  },
   "author": "zhuchaoyang <zcy_2013@163.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-es2105": "^0.0.0",
+    "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.7",
