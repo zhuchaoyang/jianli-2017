@@ -15,8 +15,8 @@ class App extends Component {
             className="app"
             component="div"
             transitionName="app"
-            transitionEnterTimeout={1000}
-            transitionLeaveTimeout={1000}>
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}>
             <div className="content" key={this.props.location.pathname}>
               {this.props.children}
             </div>

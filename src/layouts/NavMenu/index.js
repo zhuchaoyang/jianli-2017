@@ -7,7 +7,24 @@ import { Menu, Icon } from 'antd'
 import './index.scss'
 
 class NavMenu extends Component {
+  getMenuItems(data){
+    return data.map( (info) => (
+      <Menu.Item key={ info.name }>
+        <Link to={ info.name == "home" ? "/" : `/${ info.name }` }>
+          <span className="nav-text">{ info.desc }</span>
+        </Link>
+      </Menu.Item>
+    ))
+  }
   render(){
+    const data = [
+      { name: 'home', desc: '首页' },
+      { name: 'skills', desc: '专业技能' },
+      { name: 'project', desc: '项目经验' },
+      { name: 'contact', desc: '联系我' },
+      { name: 'about', desc: '关于我' }
+    ]
+
     return (
       <aside className="layout-aside">
         <div className="layout-logo">
@@ -20,17 +37,7 @@ class NavMenu extends Component {
           theme="dark"
           defaultSelectedKeys={["home"]}
           selectedKeys={["home"]}>
-          <Menu.Item>
-            <Link to="/">
-              <span className="nav-text">首页</span>
-            </Link>
-          </Menu.Item>
-          <Menu.Item>
-            <Link to="/about">
-              <span className="nav-text">关于我</span>
-            </Link>
-          </Menu.Item>
-
+          { this.getMenuItems( data )}
         </Menu>
         <div className="aside-action">
             <Icon type="right" style={{ fontSize: 16, color: '#08c' }} />
