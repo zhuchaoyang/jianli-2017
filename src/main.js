@@ -3,6 +3,6 @@ import ReactDOM from 'react-dom'
 
 import './main.css'
 
-import App from './layouts/App.js'
+import route from './routes'
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(route, document.getElementById('app'))

@@ -29,7 +29,14 @@ module.exports = function( env ){
             use: 'css-loader',
             publicPath: '/dist'
           })
-        }
+        },
+        {
+          test: /\.scss$/,
+          use: ExtractTextWebpackPlugin.extract({
+            fallback: "style-loader",
+            use: ['css-loader?sourceMap', 'sass-loader?sourceMap'],
+          })
+        },
       ]
     },
 
