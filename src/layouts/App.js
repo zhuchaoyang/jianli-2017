@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
-import NavMenu from './NavMenu.js'
+import NavMenu from './NavMenu'
 
 import './App.scss'
 

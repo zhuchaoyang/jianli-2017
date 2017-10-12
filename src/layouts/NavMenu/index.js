@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 import { Menu, Icon } from 'antd'
 
 
-import './NavMenu.scss'
+import './index.scss'
 
 class NavMenu extends Component {
   render(){
