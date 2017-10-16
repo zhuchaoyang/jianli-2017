@@ -7,13 +7,69 @@
   background: #404040;
   transition: all .3s ease;
 
+  &.layout-aside-collapse{
+    width: 64px;
+
+    .layout-logo{
+      padding: 10px 0 10px 15px;
+    }
+
+    .layout-logo i,
+    .layout-nav i{
+      padding-right: 0;
+    }
+    .aside-action{
+      width: 64px;
+
+      i{
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+
+  .layout-logo{
+    height: 60px;
+    line-height: 40px;
+    padding: 10px 0 10px 24px;
+    background: #404040;
+    transition: all .3s ease;
+
+    .logo{
+      font-size: 30px;
+      color: #fff;
+      cursor: pointer;
+      transition: all 1s ease;
+
+      &:hover{
+        transform: rotateZ(360deg);
+      }
+    }
+    .title-text{
+      color: #fff;
+      line-height: 40px;
+      font-size: 20px;
+      height: 100%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      transition: all .3s ease;
+    }
+  }
+
   .layout-nav, li{
     list-style-type: none;
 
-    a{ text-decoration: none;}
-    .nav-text{
-      font-size: 16px;
-      color: #fff;
+    a{
+      text-decoration: none;
+      height: 100%;
+
+      .nav-text{
+        font-size: 16px;
+        color: #fff;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
     }
   }
 
@@ -27,5 +83,13 @@
     background: #656565;
     cursor: pointer;
     text-align: center;
+    transition: all .3s ease;
+
+    i{
+      font-size: 20px;
+      font-weight: 600;
+      vertical-align: middle;
+      transition: all .3s ease;
+    }
   }
 }

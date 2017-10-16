@@ -105,3 +105,26 @@ cd ..
 	- 在React组件进入或者离开DOM的时候，它是一种简单地执行CSS过渡和动画的方式。
 - 应用到App组件
 - 使用CSS3 transition 和 transform 添加过渡效果
+
+#NavMenu 导航组件开发（三）
+- 新增fonts图标字体库美化组件展示
+- file-loader 和 url-loader安装
+- 以及webpack配置
+- 组件中增加inconfont
+- 优化CSS
+
+#实现collapse折叠功能
+- 控制组件的展示是否折叠，其实控制组件的对应状态即可
+	- state -> collpase
+- 对应的，通过collpase这个state来确定样式className
+	- collpase -> className -> 样式
+
+#实现路由激活状态的样式
+>本质还是修改`activeClass`
+
+- anrd -> Menu组件
+	- selectedKeys 当前选中的菜单项key数组string[]
+	- defaultSelectedKeys初始选中的菜单项key数组string[]
+
+- 解析url -> 拿到hash -> hash值作为state传入组件 -> selectedKeys
+- 什么时候改变state -> componentDidUpdate

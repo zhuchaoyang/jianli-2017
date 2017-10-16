@@ -6,6 +6,11 @@
   bottom: 0;
   background-color: #f7f8fa;
   padding: 20px 40px 40px;
+  transition: all .3s ease;
+
+  &.main-collapse{
+    left: 64px;
+  }
 
   .app{
     position: relative;
