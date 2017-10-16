@@ -23,7 +23,8 @@ module.exports = function( env ){
         'react-router',
         'prop-types',
         'antd', //antd 过大，需要按需加载（暂时不处理）
-        'react-addons-css-transition-group'
+        'react-addons-css-transition-group',
+        'axios'
       ]
     },
 
@@ -140,9 +141,9 @@ module.exports = function( env ){
 
       //把公用文件单独打包
       //名字会自动使用output的filename
-      new webpack.optimize.CommonsChunkPlugin({// 公共代码分离打包
-        names: ['vendor']
-      }),
+      // new webpack.optimize.CommonsChunkPlugin({// 公共代码分离打包
+      //   names: ['vendor']
+      // }),
 
       new CopyWebpackPlugin([ // 复制高度静态资源
         {
@@ -152,13 +153,13 @@ module.exports = function( env ){
         }
       ]),
 
-      new webpack.DefinePlugin({
-        'process.env': {// 这是给 React / Redux 打包用的
-            NODE_ENV: JSON.stringify('production')
-        },
-        __DEV__: env === 'development',
-        __PROD__: env === 'production',
-      }),
+      // new webpack.DefinePlugin({
+      //   'process.env': {// 这是给 React / Redux 打包用的
+      //       NODE_ENV: JSON.stringify('production')
+      //   },
+      //   __DEV__: env === 'development',
+      //   __PROD__: env === 'production',
+      // }),
 
     ],
 

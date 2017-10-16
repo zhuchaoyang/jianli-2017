@@ -1,0 +1,21 @@
+.project{
+  .project-content{
+    .project-item{
+
+      .item-title{
+        font-size: 2em;
+        color: #00aeef;
+
+        .item-link{
+          color: #666;
+          font-size: 0.2em;
+          padding: 0.3em 0.3em;
+          border: 1px solid gray;
+          border-radius: 10px;
+          margin-left: 0.8em;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}
