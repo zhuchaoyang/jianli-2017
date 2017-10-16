@@ -22,16 +22,13 @@ class NavMenu extends Component {
   render(){
     const data = [
       { name: 'home',     desc: '首页',      icon: "icon-index" },
-      { name: 'skills',   desc: '专业技能',  icon: "icon-skill" },
+      { name: 'skill',    desc: '专业技能',  icon: "icon-skill" },
       { name: 'project',  desc: '项目经验',  icon: "icon-project" },
       { name: 'contact',  desc: '联系我',    icon: "icon-contact" },
       { name: 'about',    desc: '关于我',    icon: "icon-about" }
     ]
 
     const { collapse, handleCollapse, pathname } = this.props;
-
-
-    console.log('sss')
 
     return (
       <aside className={ collapse ? "layout-aside layout-aside-collapse" : "layout-aside" }>

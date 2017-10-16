@@ -6,7 +6,7 @@ import About from '../containers/About'
 import Contact from '../containers/Contact'
 import Home from '../containers/Home'
 import Project from '../containers/Project'
-import Skills from '../containers/Skills'
+import Skill from '../containers/Skill'
 
 export default (
   <Router history={ hashHistory }>
@@ -15,7 +15,7 @@ export default (
       <Route path="about" component={About} />
       <Route path="contact" component={Contact} />
       <Route path="project" component={Project} />
-      <Route path="skills" component={Skills} />
+      <Route path="skill" component={Skill} />
     </Route>
   </Router>
 )
