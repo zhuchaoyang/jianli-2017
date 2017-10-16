@@ -7,6 +7,10 @@
   background: #404040;
   transition: all .3s ease;
 
+  .ant-menu.ant-menu-dark .ant-menu-item-selected {
+      background-color: #00aeef;
+  }
+
   &.layout-aside-collapse{
     width: 64px;
 
