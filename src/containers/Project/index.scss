@@ -18,5 +18,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 2em;
+    margin-bottom: 50px;
+
+    .ant-timeline-item-head-blue {
+      border-color: #00aeef;
+      color: #00aeef;
+    }
+    // .ant-timeline-item-content a{
+    //   color: #999;
+    // }
   }
 }

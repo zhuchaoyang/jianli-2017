@@ -3,11 +3,18 @@
 2. [搭建项目基础架构（一）](#组件化拆分)
 3. [项目架构规划](#项目架构规划)
 4. [跑同一个组件](#跑同一个组件)
-
+5. [添加container下各组件并跑通路由](#添加container下各组件并跑通路由)
+6. [使用React动画组件实现页面切换的动画和过渡效果](#使用React动画组件实现页面切换的动画和过渡效果)
+7. [NavMenu导航组件开发3](#NavMenu导航组件开发3)
+8. [实现collapse折叠功能](#实现collapse折叠功能)
+9. [实现路由激活状态的样式](#实现路由激活状态的样式)
+10. [目录层级调整和项目首页开发](#目录层级调整和项目首页开发)
+11. [Project组件开发](#Project组件开发)
+12. [Contact组件开发](#Contact组件开发)
 #《使用react技术栈从零开始打造在线个人简历网站（一）》
 
 ##实战案例介绍
-使用全新的前端技术栈打造属于自己的个人在线酷炫建立网站，包括首页、个人介绍、专业技能、项目经验、联系我等内容。提前预览地址 (https://guoyongfeng.github.io/react-resume/dist/index.html#/)
+首页、个人介绍、专业技能、项目经验、联系我等内容。预览地址 (zhuchaoyang.github.io)
 
 ##项目过程中会使用的技术点
 - 基础的Shell、Chrome浏览器、Atom代码编辑器、Terminal终端、Node.js全局环境
@@ -19,10 +26,6 @@
 - Axios实现HTTP请求和Promise数据处理
 - 目录划分、分层、优良的代码组织方式等项目架构指导
 
-##实战说明
-1.对所涉及的知识点最好提前学习，或者跟着视频一步步实践
-2.遇到问题及时相互交流，有不懂的可在讨论群提出
-3.后续可自己发挥和扩展
 
 #项目需求分析及组件化规划
 >制作一个属于自己的个人简历网站，采用SPA架构进行开发
@@ -106,7 +109,7 @@ cd ..
 - 应用到App组件
 - 使用CSS3 transition 和 transform 添加过渡效果
 
-#NavMenu 导航组件开发（三）
+#NavMenu导航组件开发3
 - 新增fonts图标字体库美化组件展示
 - file-loader 和 url-loader安装
 - 以及webpack配置
@@ -128,3 +131,37 @@ cd ..
 
 - 解析url -> 拿到hash -> hash值作为state传入组件 -> selectedKeys
 - 什么时候改变state -> componentDidUpdate
+
+#目录层级调整和项目首页开发
+
+##目录层级
+>示例：App组件资源维护
+
+- App
+	- index.js
+	- index.css
+	- test.spec.js
+	- mock.json
+	- index.less
+	- img/
+	- action.js
+	- constant.js
+	- reducer.js
+
+#首页开发
+
+- Home组件
+- 组件样式
+	- 用到部分CSS3相关的属性和布局方式
+
+#Project组件开发
+
+- 将Github上个人的开源项目的基本信息拉过来展示
+- axios -> 一个基于promise的HTTP库
+- antd ->TimeLine时间轴组件 & Timeline.Item 组件的应用
+- 组件样式优化
+
+#Contact组件开发
+
+- 整体还是偏样式，难度不大
+- 会有一些小技巧 & Modal组件的使用

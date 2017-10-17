@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import { Link } from 'react-router';
+import PropTypes from 'prop-types';
 
-import { Menu, Icon } from 'antd'
+import { Menu, Icon } from 'antd';
 
 // { collapse ? "" : <span className="nav-text">{ info.desc }</span> }
-import './index.scss'
+import './index.scss';
 
 class NavMenu extends Component {
 
@@ -22,31 +22,31 @@ class NavMenu extends Component {
   render(){
     const data = [
       { name: 'home',     desc: '首页',      icon: "icon-index" },
+      { name: 'about',    desc: '关于我',    icon: "icon-about" },
       { name: 'skill',    desc: '专业技能',  icon: "icon-skill" },
       { name: 'project',  desc: '项目经验',  icon: "icon-project" },
       { name: 'contact',  desc: '联系我',    icon: "icon-contact" },
-      { name: 'about',    desc: '关于我',    icon: "icon-about" }
     ]
 
-    const { collapse, handleCollapse, pathname } = this.props;
+    const { collapse, handleCollapse, current } = this.props;
 
     return (
-      <aside className={ collapse ? "layout-aside layout-aside-collapse" : "layout-aside" }>
-        <div className="layout-logo">
+      <aside className="layout-sidebar">
+        <div className="sidebar-logo">
           <i className="iconfont icon-jianli logo"></i>
           { collapse ? "" : <span className="title-text">朱朝阳</span> }
         </div>
         <Menu
-          className="layout-nav"
+          className="sidebar-nav"
           mode="inline"
           theme="dark"
           defaultSelectedKeys={['project']}
-          selectedKeys={[pathname]}>
+          selectedKeys={[current]}>
           { this.getMenuItems( data, collapse )}
         </Menu>
-        <div className="aside-action" onClick={handleCollapse}>
+        <div className="sidebar-action" onClick={handleCollapse}>
           {/*{ collapse ? <Icon type="right" /> : <Icon type="left" /> }*/}
-          <Icon type="right" />
+          <Icon type="right" title={ collapse ? "展开" : "收起"}/>
         </div>
       </aside>
     )

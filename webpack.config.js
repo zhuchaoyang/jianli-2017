@@ -13,18 +13,20 @@ var dist = path.resolve(__dirname, './dist'); // 打包目录
 
 
 module.exports = function( env ){
-  return {
+  var config = {
     entry: {
       main: path.join(src, "main.js"),
+      //打包时加上公用的css和js
+      // base: [
+      //   path.join(src, 'base.js'),
+      //   path.join(src, 'base.css'),
+      // ],
       // 框架 / 类库 分离打包
       vendor: [
         'react',
         'react-dom',
         'react-router',
         'prop-types',
-        'antd', //antd 过大，需要按需加载（暂时不处理）
-        'react-addons-css-transition-group',
-        'axios'
       ]
     },
 
@@ -34,7 +36,8 @@ module.exports = function( env ){
       // publicPath: './static/'    //处理静态资源引用地址
 
       path: dist,
-      filename: "[name].js",
+      filename: "[name].[hash:8].js",
+      // filename: "[name].js",
       // publicPath: './'
     },
 
@@ -46,9 +49,9 @@ module.exports = function( env ){
         // ================================
         // 自定义路径别名
         // ================================
-        ASSET: path.join(src, 'assets'),
-        COMPONENT: path.join(src, 'components'),
-        ROUTE: path.join(src, 'routes'),
+        // ASSET: path.join(src, 'assets'),
+        // COMPONENT: path.join(src, 'components'),
+        // ROUTE: path.join(src, 'routes'),
 
       }
     },
@@ -60,8 +63,8 @@ module.exports = function( env ){
     //使用方式即为var $ = require("jquery")
     // externals: {
     //   jquery: "jQuery",
-    //   pageResponse: 'pageResponse'
-    // };
+    //   // pageResponse: 'pageResponse'
+    // },
 
     module: {
       rules: [
@@ -87,7 +90,8 @@ module.exports = function( env ){
         },
         {
           test: /\.(woff|svg|eot|ttf)(\?.*)?$/,
-          loader: "url-loader?limit=50000"  // 50000B 以下使用 base64
+          // loader: "url-loader?limit=50000&name=[path][name].[ext]"
+          // loader: "url-loader?limit=50000"  // 50000B 以下使用 base64
         },
         {
           test: /\.(png|jpg|gif|jpeg)$/,
@@ -110,6 +114,12 @@ module.exports = function( env ){
     },
 
     plugins: [
+      //提供Vue和$的全局变量
+      // new webpack.ProvidePlugin({
+      //   $: 'jquery',
+      //   jQuery: "jquery",
+      //   "window.jQuery": "jquery"
+      // }),
       //每个entry, 打一个包
       //如果使用了异步组件，css还是打一个大包
       //如果是dev环境, css不要打单独的包
@@ -141,17 +151,23 @@ module.exports = function( env ){
 
       //把公用文件单独打包
       //名字会自动使用output的filename
-      // new webpack.optimize.CommonsChunkPlugin({// 公共代码分离打包
-      //   names: ['vendor']
-      // }),
+      new webpack.optimize.CommonsChunkPlugin({// 公共代码分离打包
+        name: 'common'
+      }),
 
       new CopyWebpackPlugin([ // 复制高度静态资源
         {
           from: path.join(rootPath, 'static'),
-          to: dist,
-          ignore: ['*.md']
-        }
-      ]),
+          // to: dist,
+
+        },
+        // {
+        //   from: path.join(src, 'assets'),
+        //   to: path.join(dist, 'assets')
+        // }
+      ],{
+        ignore: ['*.md']
+      }),
 
       // new webpack.DefinePlugin({
       //   'process.env': {// 这是给 React / Redux 打包用的
@@ -166,8 +182,18 @@ module.exports = function( env ){
     devServer: {
       contentBase: dist,
       inline: true,
-      port: 3030
+      port: 3030,
+      historyApiFallback: true,
+      // hot: true,
+      stats: {
+          colors: true
+        },
     }
 
   }
+
+
+
+
+  return config;
 }

@@ -1,4 +1,4 @@
-.layout-aside{
+.layout-sidebar{
   width: 150px;
   position: absolute;
   top: 0;
@@ -11,31 +11,14 @@
       background-color: #00aeef;
   }
 
-  &.layout-aside-collapse{
-    width: 64px;
-
-    .layout-logo{
-      padding: 10px 0 10px 15px;
-    }
-
-    .layout-logo i,
-    .layout-nav i{
-      padding-right: 0;
-    }
-    .aside-action{
-      width: 64px;
-
-      i{
-        transform: rotateZ(180deg);
-      }
-    }
-  }
-
-  .layout-logo{
+  .sidebar-logo{
     height: 60px;
     line-height: 40px;
     padding: 10px 0 10px 24px;
     background: #404040;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     transition: all .3s ease;
 
     .logo{
@@ -53,14 +36,11 @@
       line-height: 40px;
       font-size: 20px;
       height: 100%;
-      white-space: nowrap;
-      text-overflow: ellipsis;
       overflow: hidden;
-      transition: all .3s ease;
     }
   }
 
-  .layout-nav, li{
+  .sidebar-nav, li{
     list-style-type: none;
 
     a{
@@ -77,7 +57,7 @@
     }
   }
 
-  .aside-action{
+  .sidebar-action{
     width: 150px;
     height: 42px;
     line-height: 42px;
@@ -94,6 +74,27 @@
       font-weight: 600;
       vertical-align: middle;
       transition: all .3s ease;
+    }
+  }
+}
+
+//侧边栏收起
+.layout.layout-collapse .layout-sidebar{
+  width: 64px;
+
+  .sidebar-logo{
+    padding: 10px 0 10px 15px;
+  }
+
+  .sidebar-logo i,
+  .sidebar-nav i{
+    padding-right: 0;
+  }
+  .sidebar-action{
+    width: 64px;
+
+    i{
+      transform: rotateZ(180deg);
     }
   }
 }

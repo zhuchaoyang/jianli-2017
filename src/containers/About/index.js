@@ -26,11 +26,11 @@ class About extends Component {
       { id: 1, styleName: 'icon-sex', title: '性别', desc: '男' },
       { id: 2, styleName: 'icon-education', title: '学历', desc: '本科' },
       { id: 3, styleName: 'icon-University', title: '所在公司', desc: 'Bugclose' },
-      { id: 4, styleName: 'icon-coordinate', title: '籍贯', desc: '河南漯河' },
+      { id: 4, styleName: 'icon-jiguan', title: '籍贯', desc: '河南漯河' },
       { id: 5, styleName: 'icon-experience', title: '工作经验', desc: '2年' },
       { id: 6, styleName: 'icon-intention', title: '求职意向', desc: '前端开发' },
       { id: 7, styleName: 'icon-state', title: '状态', desc: '离职' },
-      { id: 8, styleName: 'icon-experience', title: '到岗时间', desc: '2周' }
+      { id: 8, styleName: 'icon-daogang', title: '到岗时间', desc: '2周内' }
     ]
 
     return (

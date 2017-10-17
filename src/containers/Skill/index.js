@@ -22,15 +22,15 @@ class Skills extends Component {
 
   render(){
     const data = [
-      { id: 0, styleName: 'icon-skill', title: '编辑器', desc: '熟练掌握Atom' },
-      { id: 1, styleName: 'icon-html', title: 'HTML5', desc: '熟练掌握HTML/HTML5新特性及其运用' },
-      { id: 2, styleName: 'icon-css', title: 'CSS3', desc: '熟练掌握CSS/CSS3新特性，熟练掌握SASS等CSS扩展语言' },
-      { id: 3, styleName: 'icon-javascript', title: 'ES6/7', desc: '掌握JS新标准ES6、ES7的语法特性(类，箭头函数，解构赋值等)，熟悉函数式编程' },
+      { id: 0, styleName: 'icon-keyboard', title: '编辑器', desc: '熟练掌握Atom' },
+      { id: 1, styleName: 'icon-html5', title: 'HTML5', desc: '熟练掌握HTML/HTML5新特性及其运用' },
+      { id: 2, styleName: 'icon-css3', title: 'CSS3', desc: '熟练掌握CSS/CSS3新特性，熟练掌握SASS等CSS扩展语言' },
+      { id: 3, styleName: 'icon-javascript', title: 'ES6', desc: '掌握JS新标准ES6的语法特性(类，箭头函数，解构赋值等)，熟悉函数式编程' },
       { id: 4, styleName: 'icon-react', title: 'React.js', desc: '掌握Babel、React、Router，熟悉Redux等。掌握vue的基本使用' },
       { id: 5, styleName: 'icon-jquery', title: 'Node.js', desc: '了解Node.js客户端的使用' },
       { id: 6, styleName: 'icon-frame', title: '前端库和框架', desc: '掌握主流的Bootstrap、Ant Design、Element等UI库和框架' },
       { id: 7, styleName: 'icon-tools', title: '前端工程化', desc: '熟练使用npm、yarn、webpack、git、svn等开发工具。' },
-      { id: 8, styleName: 'icon-Programming', title: '团队', desc: '良好的团队协作能力，熟悉敏捷开发' },
+      // { id: 8, styleName: 'icon-Programming', title: '团队', desc: '良好的团队协作能力，熟悉敏捷开发' },
     ]
 
     return (

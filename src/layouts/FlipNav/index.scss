@@ -1,0 +1,35 @@
+.layout-flip{
+  position: fixed;
+  left: 150px;
+  right: 0;
+  bottom: 10px;
+  height: 30px;
+  z-index: 99;
+  transition: all .3s;
+
+  .ant-btn{
+    font-size: 14px;
+    opacity: .7;
+
+    i{
+      margin-right: 0;
+      line-height: 1;
+    }
+  }
+  .flip-prev{
+    position: absolute;
+    height: 100%;
+    left: 16px;
+  }
+  .flip-next{
+    position: absolute;
+    height: 100%;
+    right: 16px;
+  }
+
+
+}
+
+.layout.layout-collapse .layout-flip{
+  left: 64px;
+}
