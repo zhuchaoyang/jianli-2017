@@ -129,6 +129,7 @@ module.exports = function( env ){
       }),
 
       new HtmlWebpackPlugin({
+        title: '我的简历',
         filename: 'index.html',
         template: path.join(src, "index.html")
       }),
@@ -179,16 +180,16 @@ module.exports = function( env ){
 
     ],
 
-    devServer: {
-      contentBase: dist,
-      inline: true,
-      port: 3030,
-      historyApiFallback: true,
-      // hot: true,
-      stats: {
-          colors: true
-        },
-    }
+    // devServer: {
+    //   contentBase: dist,
+    //   inline: true,
+    //   port: 3030,
+    //   historyApiFallback: true,
+    //   // hot: true,
+    //   stats: {
+    //       colors: true
+    //     },
+    // }
 
   }
 

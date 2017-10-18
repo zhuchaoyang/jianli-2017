@@ -7,7 +7,7 @@ import './index.scss'
 const Home = (props) => (
   <div className="home">
     <div className="avatar-img">
-      <img src="https://avatars2.githubusercontent.com/u/20217793?v=4" className="avatar" alt=""/>
+      <img src="./assets/images/myPhoto.jpg" className="avatar" alt=""/>
     </div>
     <div className="info">
       <p className="name">朱朝阳</p>

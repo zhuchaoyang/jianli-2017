@@ -70,6 +70,7 @@ class App extends Component {
   render(){
     const collapse = this.state.collapse;
     const direction = this.state.direction;
+    const downSrc = 'https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fwww.bugclose.com%2Fboss%2Fzcy%2Fdown%2F%E6%9C%B1%E6%9C%9D%E9%98%B3-%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%B8%88.docx' || 'https://www.bugclose.com/boss/zcy/down/朱朝阳-前端工程师.docx';
 
     return (
       <div className={ collapse ? "layout layout-collapse" : "layout" }>
@@ -92,6 +93,10 @@ class App extends Component {
 
         <FlipNav
           num={ this.state.num }/>
+        <div className="downResume" title="点击下载电子版简历">
+          <a href={ downSrc } target="_blank">下载简历</a>
+        </div>
+
       </div>
     )
   }
