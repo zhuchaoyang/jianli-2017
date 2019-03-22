@@ -14,7 +14,7 @@
 #《使用react技术栈从零开始打造在线个人简历网站（一）》
 
 ##实战案例介绍
-首页、个人介绍、专业技能、项目经验、联系我等内容。预览地址 (zhuchaoyang.github.io)
+首页、个人介绍、专业技能、项目经验、联系我等内容。预览地址 (zhuchaoyang.github.io)。
 
 ##项目过程中会使用的技术点
 - 基础的Shell、Chrome浏览器、Atom代码编辑器、Terminal终端、Node.js全局环境
